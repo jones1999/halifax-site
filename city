@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Discover Halifax</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Hero -->
+  <section class="relative bg-cover bg-center h-screen" style="background-image:url('https://images.unsplash.com/photo-1505761671935-60b3a7427bad?auto=format&fit=crop&w=1950&q=80')">
+    <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+      <h1 class="text-white text-5xl md:text-7xl font-bold">Discover Halifax</h1>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="py-12 px-6 md:px-20 bg-white text-center">
+    <h2 class="text-3xl font-bold mb-4">Welcome to Halifax</h2>
+    <p class="max-w-3xl mx-auto text-lg text-gray-600">
+      Halifax, Nova Scotia’s capital, is a lively port city known for its rich maritime history, welcoming culture, and stunning coastal scenery. From historic sites to modern culinary hotspots, it's a unique blend of tradition and innovation.  
+      :contentReference[oaicite:1]{index=1}
+    </p>
+  </section>
+
+  <!-- Attractions -->
+  <section class="py-12 px-6 md:px-20 bg-gray-100">
+    <h2 class="text-3xl font-bold mb-6 text-center">Top Attractions</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!--... (previous attraction cards) ... -->
+    </div>
+  </section>
+
+  <!-- Food & Dining -->
+  <section class="py-12 px-6 md:px-20 bg-white">
+    <h2 class="text-3xl font-bold mb-6 text-center">Local Flavors & Dining</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="rounded-xl overflow-hidden shadow">
+        <img src="https://images.unsplash.com/photo-1571771894821-ce9b6c11b08c?auto=format&fit=crop&w=800&q=80" alt="Seafood Plate" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h3 class="font-semibold text-xl">Fresh Seafood</h3>
+          <p class="text-gray-600">
+            Halifax is a seafood lover’s paradise—enjoy lobster boils, scallops, chowder, and oysters at eateries like Shuck Seafood and the Waterfront Warehouse.  
+            :contentReference[oaicite:2]{index=2}
+          </p>
+        </div>
+      </div>
+      <div class="rounded-xl overflow-hidden shadow">
+        <img src="https://images.unsplash.com/photo-1627314833625-d42081e5a67a?auto=format&fit=crop&w=800&q=80" alt="Donair Sandwich" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h3 class="font-semibold text-xl">Halifax's Donair</h3>
+          <p class="text-gray-600">
+            The donair—Halifax’s official dish since 2015—is a must-try. Grab it at the iconic King of Donair chain, beloved by locals and featured by chefs like Anthony Bourdain.  
+            :contentReference[oaicite:3]{index=3}
+          </p>
+        </div>
+      </div>
+      <div class="rounded-xl overflow-hidden shadow">
+        <img src="https://images.unsplash.com/photo-1583511655851-4c113aee60b7?auto=format&fit=crop&w=800&q=80" alt="Rooftop Restaurant" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h3 class="font-semibold text-xl">Stylish Dining Spots</h3>
+          <p class="text-gray-600">
+            Discover trendy venues like Drift, Bar Kismet, and The Bicycle Thief offering coastal dishes, local brews, and scenic views.  
+            :contentReference[oaicite:4]{index=4}
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Events -->
+  <section class="py-12 px-6 md:px-20 bg-gray-100">
+    <h2 class="text-3xl font-bold mb-6 text-center">Events & Festivals</h2>
+    <div class="max-w-3xl mx-auto space-y-4">
+      <div class="bg-white p-6 rounded-xl shadow">
+        <h3 class="font-semibold text-xl">Halifax Jazz Festival</h3>
+        <p class="text-gray-600">
+          Atlantic Canada's largest summer festival, drawing up to 55,000 attendees. It features free daytime programming, international acts, and music across genres.  
+          :contentReference[oaicite:5]{index=5}
+        </p>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow">
+        <h3 class="font-semibold text-xl">Busker Festival</h3>
+        <p class="text-gray-600">
+          Held each summer on the waterfront, this street performance festival brings jugglers, musicians, and magicians—completely free to enjoy.  
+          :contentReference[oaicite:6]{index=6}
+        </p>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow">
+        <h3 class="font-semibold text-xl">Halifax Fringe Festival</h3>
+        <p class="text-gray-600">
+          A creative showcase for independent theatre, with diverse performances across venues citywide each late August/September.  
+          :contentReference[oaicite:7]{index=7}
+        </p>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow">
+        <h3 class="font-semibold text-xl">Halifax Pride</h3>
+        <p class="text-gray-600">
+          Atlantic Canada’s biggest LGBTQ+ festival. Held each mid-July, it celebrates diversity with parades, parties, and community events.  
+          :contentReference[oaicite:8]{index=8}
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Map -->
+  <section class="py-12 px-6 md:px-20 bg-white">
+    <h2 class="text-3xl font-bold mb-6 text-center">Explore on the Map</h2>
+    <div id="map" class="w-full h-96 rounded-xl shadow-md"></div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-6 bg-gray-800 text-white text-center">
+    <p>&copy; 2025 Discover Halifax. Built with passion for the city.</p>
+  </footer>
+
+  <script>
+    const map = L.map('map').setView([44.6488, -63.5752], 12);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 19, attribution: '© OpenStreetMap' }).addTo(map);
+    const spots = [
+      ["Halifax Waterfront", 44.6435, -63.5830],
+      ["Citadel Hill", 44.6488, -63.5723],
+      ["Maritime Museum", 44.6428, -63.5804],
+      ["Public Gardens", 44.6465, -63.5760],
+      ["Point Pleasant Park", 44.6314, -63.5838],
+      ["Shuck Seafood", 44.6475, -63.5765]  // Food highlight
+    ];
+    spots.forEach(([name, lat, lon]) => {
+      L.marker([lat, lon]).addTo(map).bindPopup(`<b>${name}</b>`);
+    });
+  </script>
+
+</body>
+</html>
